@@ -6,22 +6,20 @@
   
   <title>Docker基本命令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hint(重要): 若需要访问云主机的host端口，请在本地使用-L 命令将云主机的32768、32769、8000、8080四个端口映射到本地，具体命令可以参考如下：1$ ssh root@你的云主机外网ip -L 32769:0.0.0.0:32769 -L 32768:0.0.0.0:32768 -L 8080:0.0.0.0:8080 -L 8000:0.0.0.0:8000  一）安装D">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="Docker基本命令">
-<meta property="og:url" content="https://github.com/tennnx.github.io/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:url" content="http://example.com/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hint(重要): 若需要访问云主机的host端口，请在本地使用-L 命令将云主机的32768、32769、8000、8080四个端口映射到本地，具体命令可以参考如下：1$ ssh root@你的云主机外网ip -L 32769:0.0.0.0:32769 -L 32768:0.0.0.0:32768 -L 8080:0.0.0.0:8080 -L 8000:0.0.0.0:8000  一）安装D">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-01T12:32:35.000Z">
-<meta property="article:modified_time" content="2023-04-01T12:39:03.629Z">
+<meta property="article:published_time" content="2023-04-01T14:32:34.000Z">
+<meta property="article:modified_time" content="2023-04-01T14:32:34.406Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/tennnx.github.io/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/tennnx.github.io/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
   
   
     
@@ -29,11 +27,11 @@
 
   
   
-<link rel="stylesheet" href="/tennnx.github.io/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
   
     
-<link rel="stylesheet" href="/tennnx.github.io/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -46,7 +44,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/tennnx.github.io/" id="logo">Hexo</a>
+        <a href="/" id="logo">Hexo</a>
       </h1>
       
     </div>
@@ -54,19 +52,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/tennnx.github.io/">Home</a>
+          <a class="main-nav-link" href="/">Home</a>
         
-          <a class="main-nav-link" href="/tennnx.github.io/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/tennnx.github.io/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/tennnx.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -75,8 +73,8 @@
       <div class="outer">
         <section id="main"><article id="post-Docker基本命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/tennnx.github.io/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time class="dt-published" datetime="2023-04-01T12:32:35.000Z" itemprop="datePublished">2023-04-01</time>
+    <a href="/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2023-04-01T14:32:34.000Z" itemprop="datePublished">2023-04-01</time>
 </a>
     
   </div>
@@ -95,153 +93,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h4 id="Hint-重要-若需要访问云主机的host端口，请在本地使用-L-命令将云主机的32768、32769、8000、8080四个端口映射到本地，具体命令可以参考如下："><a href="#Hint-重要-若需要访问云主机的host端口，请在本地使用-L-命令将云主机的32768、32769、8000、8080四个端口映射到本地，具体命令可以参考如下：" class="headerlink" title="Hint(重要): 若需要访问云主机的host端口，请在本地使用-L 命令将云主机的32768、32769、8000、8080四个端口映射到本地，具体命令可以参考如下："></a><code>Hint(重要):</code> 若需要访问云主机的host端口，请在本地使用<code>-L </code>命令将云主机的<code>32768、32769、8000、8080</code>四个端口映射到本地，具体命令可以参考如下：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh root@你的云主机外网ip -L 32769:0.0.0.0:32769 -L 32768:0.0.0.0:32768 -L 8080:0.0.0.0:8080 -L 8000:0.0.0.0:8000</span><br></pre></td></tr></table></figure>
-
-<h3 id="一）安装Docker并测试"><a href="#一）安装Docker并测试" class="headerlink" title="一）安装Docker并测试"></a>一）安装Docker并测试</h3><h4 id="1-Docker是什么？"><a href="#1-Docker是什么？" class="headerlink" title="1. Docker是什么？"></a>1. Docker是什么？</h4><blockquote>
-<p>一个开放源代码项目，通过在Linux上提供<strong>OS级虚拟化</strong>的附加抽象层和自动化层，使<strong>容器</strong>内软件应用程序的部署自动化。</p>
-</blockquote>
-<h4 id="简单来说，Docker是一种工具，它使开发人员，系统管理员等可以轻松地在沙盒（称为容器）中部署其应用程序，以在主机操作系统运行。Docker的主要好处是，它允许用户将具有所有依赖关系的应用程序打包到用于软件开发的标准化单元中。与虚拟机不同，容器不具有高开销，因此可以更有效地利用基础系统和资源。"><a href="#简单来说，Docker是一种工具，它使开发人员，系统管理员等可以轻松地在沙盒（称为容器）中部署其应用程序，以在主机操作系统运行。Docker的主要好处是，它允许用户将具有所有依赖关系的应用程序打包到用于软件开发的标准化单元中。与虚拟机不同，容器不具有高开销，因此可以更有效地利用基础系统和资源。" class="headerlink" title="简单来说，Docker是一种工具，它使开发人员，系统管理员等可以轻松地在沙盒（称为容器）中部署其应用程序，以在主机操作系统运行。Docker的主要好处是，它允许用户将具有所有依赖关系的应用程序打包到用于软件开发的标准化单元中。与虚拟机不同，容器不具有高开销，因此可以更有效地利用基础系统和资源。"></a>简单来说，Docker是一种工具，它使开发人员，系统管理员等可以轻松地在沙盒（称为<em>容器</em>）中部署其应用程序，以在主机操作系统运行。Docker的主要好处是，它允许用户将<strong>具有所有依赖关系的应用程序打包到</strong>用于软件开发<strong>的标准化单元</strong>中。与虚拟机不同，容器不具有高开销，因此可以更有效地利用基础系统和资源。</h4><h4 id="2-在Linux上安装Docker环境"><a href="#2-在Linux上安装Docker环境" class="headerlink" title="2. 在Linux上安装Docker环境"></a>2. 在Linux上安装Docker环境</h4><blockquote>
-<p>直到几个版本之前，在OSX和Windows上运行Docker还是很麻烦的。但是，最近，Docker已投入大量资金来改善其用户在这些OS上的体验，因此，现在运行Docker是一个轻而易举的事。</p>
-</blockquote>
-<h4 id="这里只介绍如何在Linux上安装和运行Docker-如果同学们想要在其他系统上尝试使用Docker，可以参考Docker官网给出的教程（如何在Mac、Linux或Windows上使用Docker）"><a href="#这里只介绍如何在Linux上安装和运行Docker-如果同学们想要在其他系统上尝试使用Docker，可以参考Docker官网给出的教程（如何在Mac、Linux或Windows上使用Docker）" class="headerlink" title="这里只介绍如何在Linux上安装和运行Docker, 如果同学们想要在其他系统上尝试使用Docker，可以参考Docker官网给出的教程（如何在Mac、Linux或Windows上使用Docker）"></a>这里只介绍如何在Linux上安装和运行Docker, 如果同学们想要在其他系统上尝试使用Docker，可以参考Docker官网给出的教程（如何在<a target="_blank" rel="noopener" href="https://docs.docker.com/docker-for-mac/install">Mac</a>、<a target="_blank" rel="noopener" href="https://docs.docker.com/install/linux/docker-ce/ubuntu">Linux</a>或<a href="%5BWindows%5D(https://docs.docker.com/docker-for-windows/install)">Windows</a>上使用Docker）</h4><h4 id="a-安装docker"><a href="#a-安装docker" class="headerlink" title="a) 安装docker"></a>a) 安装docker</h4><h4 id="推荐使用如下命令安装docker"><a href="#推荐使用如下命令安装docker" class="headerlink" title="推荐使用如下命令安装docker"></a>推荐使用如下命令安装docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
-
-<h4 id="如果遇到错误，请先运行下面的命令后再重新安装docker"><a href="#如果遇到错误，请先运行下面的命令后再重新安装docker" class="headerlink" title="如果遇到错误，请先运行下面的命令后再重新安装docker"></a>如果遇到错误，请先运行下面的命令后再重新安装docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="按照提示将自己的用户加入docker的用户组-root-用户无需操作"><a href="#按照提示将自己的用户加入docker的用户组-root-用户无需操作" class="headerlink" title="按照提示将自己的用户加入docker的用户组(root 用户无需操作)"></a>按照提示将自己的用户加入docker的用户组(root 用户无需操作)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo usermod -aG docker yourusername</span><br></pre></td></tr></table></figure>
-
-<h4 id="基本的docker启动与查看状态命令如下"><a href="#基本的docker启动与查看状态命令如下" class="headerlink" title="基本的docker启动与查看状态命令如下"></a>基本的docker启动与查看状态命令如下</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ service docker start</span><br><span class="line">$ service docker stop</span><br><span class="line">$ service docker restart</span><br><span class="line"></span><br><span class="line">$ service docker status</span><br><span class="line"></span><br><span class="line">● docker.service - Docker Application Container Engine</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)</span><br><span class="line">   Active: active (running) since Mon 2020-10-05 21:34:37 CST; 1min 45s ago</span><br><span class="line">     Docs: https://docs.docker.com</span><br><span class="line"> Main PID: 1954 (dockerd)</span><br><span class="line">    Tasks: 8</span><br><span class="line">   Memory: 40.1M</span><br><span class="line">   CGroup: /system.slice/docker.service</span><br><span class="line">           └─1954 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</span><br></pre></td></tr></table></figure>
-
-<h2 id="为保证试验正常进行，请根据以下步骤修改docker镜像源从默认镜像库改为ucloud镜像库"><a href="#为保证试验正常进行，请根据以下步骤修改docker镜像源从默认镜像库改为ucloud镜像库" class="headerlink" title="为保证试验正常进行，请根据以下步骤修改docker镜像源从默认镜像库改为ucloud镜像库"></a><strong>为保证试验正常进行，请根据以下步骤修改docker镜像源从默认镜像库改为ucloud镜像库</strong></h2><h3 id="hint：docker镜像库中包含大量可用镜像，可以直接下载到本地使用，常用的镜像库比如https-hub-docker-com"><a href="#hint：docker镜像库中包含大量可用镜像，可以直接下载到本地使用，常用的镜像库比如https-hub-docker-com" class="headerlink" title="hint：docker镜像库中包含大量可用镜像，可以直接下载到本地使用，常用的镜像库比如https://hub.docker.com/"></a>hint：docker镜像库中包含大量可用镜像，可以直接下载到本地使用，常用的镜像库比如<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com/</a></h3><h4 id="1-在https-cloud-docker-com，免费注册一个-Docker-账号。用以下命令登录docker-hub，输入创建账号的用户名、密码"><a href="#1-在https-cloud-docker-com，免费注册一个-Docker-账号。用以下命令登录docker-hub，输入创建账号的用户名、密码" class="headerlink" title="1.在https://cloud.docker.com，免费注册一个 Docker 账号。用以下命令登录docker hub，输入创建账号的用户名、密码"></a>1.在<a target="_blank" rel="noopener" href="https://cloud.docker.com,免费注册一个/">https://cloud.docker.com，免费注册一个</a> Docker 账号。用以下命令登录<code>docker hub</code>，输入创建账号的用户名、密码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker login </span><br><span class="line">Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="string">&#x27;t have a Docker ID, head over to https://hub.docker.com to create one.</span></span><br><span class="line"><span class="string">Username: linlinshe</span></span><br><span class="line"><span class="string">Password: </span></span><br><span class="line"><span class="string">WARNING! Your password will be stored unencrypted in /root/.docker/config.json.</span></span><br><span class="line"><span class="string">Configure a credential helper to remove this warning. See</span></span><br><span class="line"><span class="string">https://docs.docker.com/engine/reference/commandline/login/#credentials-store</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Login Succeeded</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="出现login-succeeded表示登陆成功"><a href="#出现login-succeeded表示登陆成功" class="headerlink" title="出现login succeeded表示登陆成功"></a>出现<code>login succeeded</code>表示登陆成功</h4><h4 id="2-将如下内容写入-etc-docker-daemon-json中（没有此文件则需要新建-ps-需保证docker已经运行过，否则会出现-etc-docker文件夹不存在）"><a href="#2-将如下内容写入-etc-docker-daemon-json中（没有此文件则需要新建-ps-需保证docker已经运行过，否则会出现-etc-docker文件夹不存在）" class="headerlink" title="2.将如下内容写入/etc/docker/daemon.json中（没有此文件则需要新建. ps: 需保证docker已经运行过，否则会出现/etc/docker文件夹不存在）"></a>2.将如下内容写入<code>/etc/docker/daemon.json</code>中（没有此文件则需要新建. ps: 需保证<code>docker</code>已经运行过，否则会出现<code>/etc/docker</code>文件夹不存在）</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;https://uhub-edu.service.ucloud.cn&quot;</span><span class="punctuation">,</span><span class="string">&quot;https://uhub.service.ucloud.cn&quot;</span><span class="punctuation">,</span><span class="string">&quot;https://registry.docker-cn.com&quot;</span><span class="punctuation">,</span><span class="string">&quot;http://hub-mirror.c.163.com&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="hint：可以使用nano命令直接在云主机上编辑daemon-json，使用方法请自行查找。也可以在本地用纯文本编辑器（如txt）编辑，然后上传到云主机。"><a href="#hint：可以使用nano命令直接在云主机上编辑daemon-json，使用方法请自行查找。也可以在本地用纯文本编辑器（如txt）编辑，然后上传到云主机。" class="headerlink" title="hint：可以使用nano命令直接在云主机上编辑daemon.json，使用方法请自行查找。也可以在本地用纯文本编辑器（如txt）编辑，然后上传到云主机。"></a>hint：可以使用<code>nano</code>命令直接在云主机上编辑daemon.json，使用方法请自行查找。也可以在本地用纯文本编辑器（如txt）编辑，然后上传到云主机。</h4><h4 id="之后重新启动docker即可"><a href="#之后重新启动docker即可" class="headerlink" title="之后重新启动docker即可"></a>之后重新启动<code>docker</code>即可</h4><h4 id="b-测试Docker是否安装成功"><a href="#b-测试Docker是否安装成功" class="headerlink" title="b) 测试Docker是否安装成功"></a>b) 测试Docker是否安装成功</h4><h4 id="当你的按照上述步骤安装完docker之后，可以通过运行如下命令来测试docker是否安装成功"><a href="#当你的按照上述步骤安装完docker之后，可以通过运行如下命令来测试docker是否安装成功" class="headerlink" title="当你的按照上述步骤安装完docker之后，可以通过运行如下命令来测试docker是否安装成功"></a>当你的按照上述步骤安装完docker之后，可以通过运行如下命令来测试docker是否安装成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker run hello-world</span><br><span class="line"></span><br><span class="line">Hello from Docker.</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-尝试使用busybox"><a href="#3-尝试使用busybox" class="headerlink" title="3. 尝试使用busybox"></a>3. 尝试使用busybox</h4><blockquote>
-<p>到此为止，你的docker环境已经安装完成并且正常运行，接下来我们尝试一些更加复杂的工作</p>
-</blockquote>
-<h4 id="在这个部分，我们将要通过docker-run命令去开启一个BusyBox-container"><a href="#在这个部分，我们将要通过docker-run命令去开启一个BusyBox-container" class="headerlink" title="在这个部分，我们将要通过docker run命令去开启一个BusyBox container"></a>在这个部分，我们将要通过<code>docker run</code>命令去开启一个<code>BusyBox container</code></h4><h4 id="a-首先，我们通过运行如下命令从镜像库拉取BusyBox的镜像"><a href="#a-首先，我们通过运行如下命令从镜像库拉取BusyBox的镜像" class="headerlink" title="a) 首先，我们通过运行如下命令从镜像库拉取BusyBox的镜像:"></a>a) 首先，我们通过运行如下命令从镜像库拉取<code>BusyBox</code>的镜像:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull busybox</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果运行过程中遇到  <strong>permission denied</strong> 此类的错误，可以尝试在命令前加入 <strong>sudo</strong> 命令</p>
-</blockquote>
-<h4 id="b-pull-命令可以将busybox-image从docker仓库中拉取到本地，你可以使用docker-image命令查看系统上目前已有的image"><a href="#b-pull-命令可以将busybox-image从docker仓库中拉取到本地，你可以使用docker-image命令查看系统上目前已有的image" class="headerlink" title="b) pull 命令可以将busybox image从docker仓库中拉取到本地，你可以使用docker image命令查看系统上目前已有的image."></a>b) <strong>pull</strong> 命令可以将<code>busybox image</code>从docker仓库中拉取到本地，你可以使用<strong>docker image</strong>命令查看系统上目前已有的<strong>image</strong>.</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">REPOSITORY 	TAG 	IMAGE ID 		CREATED			VIRT</span><br><span class="line">busybox 	latest 	c51f86c28340 	4 weeks ago 	1.10</span><br></pre></td></tr></table></figure>
-
-<h4 id="c-我们接下来继续尝试使用docker-run命令来运行busybox"><a href="#c-我们接下来继续尝试使用docker-run命令来运行busybox" class="headerlink" title="c) 我们接下来继续尝试使用docker run命令来运行busybox"></a>c) 我们接下来继续尝试使用<code>docker run</code>命令来运行<code>busybox</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run busybox</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
-
-<h4 id="d-可以发现命令运行完，什么也没有发生。这不是bug，当我们执行docker-run命令时，docker会从本地查找image，然后加载image生成container容器，并在其中运行command。正因为我们没有运行任何command，此容器没有任何输出。让我们加入自定义的command再试一次。"><a href="#d-可以发现命令运行完，什么也没有发生。这不是bug，当我们执行docker-run命令时，docker会从本地查找image，然后加载image生成container容器，并在其中运行command。正因为我们没有运行任何command，此容器没有任何输出。让我们加入自定义的command再试一次。" class="headerlink" title="d) 可以发现命令运行完，什么也没有发生。这不是bug，当我们执行docker run命令时，docker会从本地查找image，然后加载image生成container容器，并在其中运行command。正因为我们没有运行任何command，此容器没有任何输出。让我们加入自定义的command再试一次。"></a>d) 可以发现命令运行完，什么也没有发生。这不是bug，当我们执行<code>docker run</code>命令时，docker会从本地查找<code>image</code>，然后加载<code>image</code>生成<code>container</code>容器，并在其中运行command。正因为我们没有运行任何command，此容器没有任何输出。让我们加入自定义的command再试一次。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run busybox <span class="built_in">echo</span> <span class="string">&quot;hello from busybox&quot;</span></span><br><span class="line">hello from busybox</span><br></pre></td></tr></table></figure>
-
-<h5 id="hint：通常-docker-image不在运行时叫image，加载运行以后叫container"><a href="#hint：通常-docker-image不在运行时叫image，加载运行以后叫container" class="headerlink" title="hint：通常,docker image不在运行时叫image，加载运行以后叫container"></a>hint：通常,docker image不在运行时叫image，加载运行以后叫container</h5><h3 id="二-熟悉Docker指令"><a href="#二-熟悉Docker指令" class="headerlink" title="二) 熟悉Docker指令"></a>二) 熟悉Docker指令</h3><h4 id="让我们来尝试不同的docker-command"><a href="#让我们来尝试不同的docker-command" class="headerlink" title="让我们来尝试不同的docker command"></a>让我们来尝试不同的<strong>docker command</strong></h4><h4 id="1-docker-ps"><a href="#1-docker-ps" class="headerlink" title="1. docker ps"></a>1. docker ps</h4><blockquote>
-<p><strong>docker ps</strong> 命令可以查看当前正在运行的所有容器的状态，包括<code>CONTAINER ID</code>、<code>IMAGE</code>、<code>COMMAND</code>、<code>CREATE (创建时间)</code>、<code>STATUS (容器状态)</code></p>
-</blockquote>
-<h4 id="让我们查看目前有哪些容器正在运行"><a href="#让我们查看目前有哪些容器正在运行" class="headerlink" title="让我们查看目前有哪些容器正在运行"></a>让我们查看目前有哪些容器正在运行</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID 	IMAGE 	COMMAND 	CREATED	 STATUS</span><br></pre></td></tr></table></figure>
-
-<h4 id="可以看到控制台输出了了一个空的列表，这是正常的，因为目前没有容器正在运行。如果需要查看包括不在运行的所有容器，我们可以加入-a-参数"><a href="#可以看到控制台输出了了一个空的列表，这是正常的，因为目前没有容器正在运行。如果需要查看包括不在运行的所有容器，我们可以加入-a-参数" class="headerlink" title="可以看到控制台输出了了一个空的列表，这是正常的，因为目前没有容器正在运行。如果需要查看包括不在运行的所有容器，我们可以加入 -a 参数"></a>可以看到控制台输出了了一个空的列表，这是正常的，因为目前没有容器正在运行。如果需要查看包括不在运行的所有容器，我们可以加入 <strong>-a</strong> 参数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID 			IMAGE 					COMMAND 			CREATED 			STATUS</span><br><span class="line">305297d7a235 			busybox 				<span class="string">&quot;uptime&quot;</span> 			11 minutes ago 		Exited (</span><br><span class="line">ff0a5c3750b9 			busybox 				<span class="string">&quot;sh&quot;</span> 				12 minutes ago 		Exited (</span><br><span class="line">14e5bd11d164 			hello-world 			<span class="string">&quot;/hello&quot;</span> 			2 minutes ago 		Exited (</span><br></pre></td></tr></table></figure>
-
-<h4 id="Wow-之前运行过的容器全部都出现在输出中了"><a href="#Wow-之前运行过的容器全部都出现在输出中了" class="headerlink" title="Wow~ 之前运行过的容器全部都出现在输出中了~"></a>Wow~ 之前运行过的容器全部都出现在输出中了~</h4><h4 id="2-docker-run-it"><a href="#2-docker-run-it" class="headerlink" title="2. docker run -it"></a>2. docker run -it</h4><blockquote>
-<p><strong>docker run -it</strong> 可以在我们创建 <strong>container</strong> 的同时，以交互式的形式获取到 <strong>container shell</strong> 的控制权. 我们可以在<strong>docker run <strong>命令中使用</strong>–name custom_name</strong> 来指定container的名称，若不指定，docker会为我们随机生成一个名字</p>
-</blockquote>
-<h4 id="接下来我们使用-run-it-命令来创建一个-busybox-container，并在其中运行几个linux命令（回想：容器是一个虚拟化的环境，里面也运行了一个”轻量级的操作系统”）"><a href="#接下来我们使用-run-it-命令来创建一个-busybox-container，并在其中运行几个linux命令（回想：容器是一个虚拟化的环境，里面也运行了一个”轻量级的操作系统”）" class="headerlink" title="接下来我们使用 run -it 命令来创建一个 busybox container，并在其中运行几个linux命令（回想：容器是一个虚拟化的环境，里面也运行了一个”轻量级的操作系统”）"></a>接下来我们使用 <strong>run -it</strong> 命令来创建一个 <code>busybox container</code>，并在其中运行几个linux命令（回想：容器是一个虚拟化的环境，里面也运行了一个”轻量级的操作系统”）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it busybox sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/ <span class="comment"># ls</span></span><br><span class="line">bin dev etc home proc root sys tmp usr var</span><br><span class="line">/ <span class="comment"># uptime</span></span><br><span class="line">05:45:21 up 5:58, 0 <span class="built_in">users</span>, load average: 0.00, 0.01, 0.04</span><br><span class="line">/ <span class="comment"># cd home &amp;&amp; pwd</span></span><br><span class="line">/home</span><br><span class="line">/ <span class="comment"># exit</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-docker-rm"><a href="#3-docker-rm" class="headerlink" title="3. docker rm"></a>3. docker rm</h4><blockquote>
-<p><strong>docker rm -args</strong> 可以删除不在运行的<strong>container</strong>，<code>args</code>可以是<strong>container name&#x2F;id</strong> (可以不写完整，但必须保证唯一)</p>
-</blockquote>
-<h4 id="下面让我们尝试删除上面的两个busybox-container"><a href="#下面让我们尝试删除上面的两个busybox-container" class="headerlink" title="下面让我们尝试删除上面的两个busybox container"></a>下面让我们尝试删除上面的两个<strong>busybox container</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">rm</span> 305297d7a235 ff0a5c3750b9</span><br><span class="line"></span><br><span class="line">305297d7a235</span><br><span class="line">ff0a5c3750b9</span><br></pre></td></tr></table></figure>
-
-<h4 id="也可以通过如下命令删除"><a href="#也可以通过如下命令删除" class="headerlink" title="也可以通过如下命令删除"></a>也可以通过如下命令删除</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">rm</span> 305 ff</span><br><span class="line">305297d7a235</span><br><span class="line">ff0a5c3750b9</span><br></pre></td></tr></table></figure>
-
-<h4 id="现在使用ps命令检查一下是否删除成功吧！"><a href="#现在使用ps命令检查一下是否删除成功吧！" class="headerlink" title="现在使用ps命令检查一下是否删除成功吧！"></a>现在使用<code>ps</code>命令检查一下是否删除成功吧！</h4><blockquote>
-<p>Hint1: image名称即为centos</p>
-</blockquote>
-<blockquote>
-<p>Hint2: 可以使用<strong>lscpu</strong>命令在container中查看linux的硬件信息，显示界面大致如下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ lscpu</span><br><span class="line"></span><br><span class="line">Architecture:        x86_64</span><br><span class="line">CPU op-mode(s):      32-bit, 64-bit</span><br><span class="line">Byte Order:          Little Endian</span><br><span class="line">CPU(s):              4</span><br><span class="line">On-line CPU(s) list: 0-3</span><br><span class="line">Thread(s) per core:  1</span><br><span class="line">Core(s) per socket:  1</span><br><span class="line">Socket(s):           4</span><br><span class="line">Vendor ID:           GenuineIntel</span><br><span class="line">CPU family:          6</span><br><span class="line">Model:               158</span><br><span class="line">Model name:          Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</span><br><span class="line">Stepping:            9</span><br><span class="line">CPU MHz:             2800.000</span><br><span class="line">BogoMIPS:            5616.00</span><br><span class="line">L1d cache:           32K</span><br><span class="line">L1i cache:           32K</span><br><span class="line">L2 cache:            256K</span><br><span class="line">L3 cache:            6144K</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<h3 id="三-使用docker创建静态webapp"><a href="#三-使用docker创建静态webapp" class="headerlink" title="三) 使用docker创建静态webapp"></a>三) 使用docker创建静态webapp</h3><h4 id="docker与虚拟机不同之处在于，在部署复杂的应用时，docker可以灵活的从docker-hub中pull各种image（如：mysql、sqlserver、java、php-etc-），并将它们自由的组合到一起，使得每个container都能发挥自己独特的作用。那么我们先从简单的部署单页面的静态网页开始吧！"><a href="#docker与虚拟机不同之处在于，在部署复杂的应用时，docker可以灵活的从docker-hub中pull各种image（如：mysql、sqlserver、java、php-etc-），并将它们自由的组合到一起，使得每个container都能发挥自己独特的作用。那么我们先从简单的部署单页面的静态网页开始吧！" class="headerlink" title="docker与虚拟机不同之处在于，在部署复杂的应用时，docker可以灵活的从docker hub中pull各种image（如：mysql、sqlserver、java、php.etc.），并将它们自由的组合到一起，使得每个container都能发挥自己独特的作用。那么我们先从简单的部署单页面的静态网页开始吧！"></a><code>docker</code>与虚拟机不同之处在于，在部署复杂的应用时，<code>docker</code>可以灵活的从<code>docker hub</code>中<code>pull</code>各种<code>image</code>（如：<code>mysql</code>、<code>sqlserver</code>、<code>java</code>、<code>php</code>.etc.），并将它们自由的组合到一起，使得每个<code>container</code>都能发挥自己独特的作用。那么我们先从简单的部署单页面的静态网页开始吧！</h4><h4 id="1-运行static-web-app"><a href="#1-运行static-web-app" class="headerlink" title="1. 运行static-web app"></a>1. 运行<code>static-web app</code></h4><h4 id="docker-hub上有许多开发者们上传的image，我们可以自由下载并且使用，这里我们使用到的image是cloud-computing-static-site-这是一个搭载了简单的静态单页面的Nginx镜像，让我们来试者运行它："><a href="#docker-hub上有许多开发者们上传的image，我们可以自由下载并且使用，这里我们使用到的image是cloud-computing-static-site-这是一个搭载了简单的静态单页面的Nginx镜像，让我们来试者运行它：" class="headerlink" title="docker hub上有许多开发者们上传的image，我们可以自由下载并且使用，这里我们使用到的image是cloud_computing/static_site,这是一个搭载了简单的静态单页面的Nginx镜像，让我们来试者运行它："></a><code>docker hub</code>上有许多开发者们上传的<code>image</code>，我们可以自由下载并且使用，这里我们使用到的<code>image</code>是<code>cloud_computing/static_site</code>,这是一个搭载了简单的静态单页面的Nginx镜像，让我们来试者运行它：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --<span class="built_in">rm</span> cloud_computing/static_site</span><br><span class="line"></span><br><span class="line">Nginx is running...</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>--rm</code> 参数的作用是当container运行结束时系统自动删除该container</p>
-</blockquote>
-<h4 id="如果顺利的话，你的终端会出现nginx-is-running-但是目前容器对我们来说是一个完全封闭的环境，我们并没有办法去访问container的端口。按’ctrl-c’可以结束并退出容器。"><a href="#如果顺利的话，你的终端会出现nginx-is-running-但是目前容器对我们来说是一个完全封闭的环境，我们并没有办法去访问container的端口。按’ctrl-c’可以结束并退出容器。" class="headerlink" title="如果顺利的话，你的终端会出现nginx is running...,但是目前容器对我们来说是一个完全封闭的环境，我们并没有办法去访问container的端口。按’ctrl+c’可以结束并退出容器。"></a>如果顺利的话，你的终端会出现<code>nginx is running...</code>,但是目前容器对我们来说是一个完全封闭的环境，我们并没有办法去访问<code>container</code>的端口。按’ctrl+c’可以结束并退出容器。</h4><h4 id="2-将container映射到本地"><a href="#2-将container映射到本地" class="headerlink" title="2. 将container映射到本地"></a>2. 将<code>container</code>映射到本地</h4><p>到此为止，我们已经部署了一个静态的<code>nginx container</code>但是并没有办法去访问，<code>docker</code>提供了许多接口去解决这个问题，我们可以通过添加参数的方式将<code>container</code>的端口或者文件夹映射到本地</p>
-<h4 id="docker提供了如下一些参数"><a href="#docker提供了如下一些参数" class="headerlink" title="docker提供了如下一些参数"></a>docker提供了如下一些参数</h4><table>
-<thead>
-<tr>
-<th align="center">-d</th>
-<th align="center">将container置于后台运行</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">-p local_port:container_port</td>
-<td align="center">将container 的某个端口映射到本地</td>
-</tr>
-<tr>
-<td align="center">-P</td>
-<td align="center">将container所有正在监听的端口全部映射到本地的随机端口</td>
-</tr>
-<tr>
-<td align="center">-v local_path:contatiner_path</td>
-<td align="center">将本地的local_path文件夹映射到container的container_path文件夹并保持同步</td>
-</tr>
-</tbody></table>
-<p> <code>**关于-v参数的说明，当你使用到-v 参数时，如**</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -v /home/data:/var/data --name <span class="built_in">test</span> ubuntu</span><br></pre></td></tr></table></figure>
-
-<p> <code>**那么相当于你将本地的/home/data目录映射到container的/var/data目录，container的/var/data目录会和你的本地目录保持同步，同时,若/var/data目录不存在，docker会自动创建，反之，目录中的内容会被全部覆盖掉(和本地的/home/data保持同步)**</code></p>
-<h4 id="static-site默认监听的80和443端口我们使用上述参数尝试将它映射到本机"><a href="#static-site默认监听的80和443端口我们使用上述参数尝试将它映射到本机" class="headerlink" title="static-site默认监听的80和443端口我们使用上述参数尝试将它映射到本机"></a><code>static-site</code>默认监听的<code>80</code>和<code>443</code>端口我们使用上述参数尝试将它映射到本机</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -P --name static_site cloud_computing/static_site</span><br><span class="line"></span><br><span class="line">e61d12292d69556eabe2a44c16cbd54486b2527e2ce4f95438e504afb7b02810</span><br></pre></td></tr></table></figure>
-
-<h4 id="查看docker给我们映射的端口"><a href="#查看docker给我们映射的端口" class="headerlink" title="查看docker给我们映射的端口"></a>查看docker给我们映射的端口</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker port static_site</span><br><span class="line"></span><br><span class="line">80/tcp -&gt; 0.0.0.0:32769</span><br><span class="line">443/tcp -&gt; 0.0.0.0:32768</span><br></pre></td></tr></table></figure>
-
-<h4 id="可以看到docker将container的80和443分别映射到了本机的32769和32768两个端口上"><a href="#可以看到docker将container的80和443分别映射到了本机的32769和32768两个端口上" class="headerlink" title="可以看到docker将container的80和443分别映射到了本机的32769和32768两个端口上"></a>可以看到<code>docker</code>将<code>container</code>的<code>80</code>和<code>443</code>分别映射到了本机的<code>32769</code>和<code>32768</code>两个端口上</h4><h4 id="3-打开浏览器，访问http-localhost-32769-若docker随机映射端口不是32768-32769可以无需验证此步骤"><a href="#3-打开浏览器，访问http-localhost-32769-若docker随机映射端口不是32768-32769可以无需验证此步骤" class="headerlink" title="3.打开浏览器，访问http://localhost:32769(若docker随机映射端口不是32768/32769可以无需验证此步骤)"></a>3.打开浏览器，访问<code>http://localhost:32769</code>(若<code>docker</code>随机映射端口不是<code>32768/32769</code>可以无需验证此步骤)</h4><h4 id="具体步骤如下"><a href="#具体步骤如下" class="headerlink" title="具体步骤如下:"></a>具体步骤如下:</h4><h4 id="1-若提示continer正在运行中，可以使用docker-stop-static-site-amp-amp-docker-rm-static-site删除正在使用的容器并重新创建"><a href="#1-若提示continer正在运行中，可以使用docker-stop-static-site-amp-amp-docker-rm-static-site删除正在使用的容器并重新创建" class="headerlink" title="1.若提示continer正在运行中，可以使用docker stop static_site &amp;&amp; docker rm static_site删除正在使用的容器并重新创建."></a>1.若提示continer正在运行中，可以使用<code>docker stop static_site &amp;&amp; docker rm static_site</code>删除正在使用的容器并重新创建.</h4><h4 id="2-创建-var-html文件夹"><a href="#2-创建-var-html文件夹" class="headerlink" title="2. 创建/var/html文件夹"></a>2. 创建<code>/var/html</code>文件夹</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /var/html</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-在-var-html中新建index-html文件，复制index-html文件中的内容到文件中，并修改以下部分为自己的信息"><a href="#3-在-var-html中新建index-html文件，复制index-html文件中的内容到文件中，并修改以下部分为自己的信息" class="headerlink" title="3.在/var/html中新建index.html文件，复制index.html文件中的内容到文件中，并修改以下部分为自己的信息"></a>3.在<code>/var/html</code>中新建<code>index.html</code>文件，复制index.html文件中的内容到文件中，并修改以下部分为自己的信息</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one-half column&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 25%&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Hello Docker!<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is being served from a <span class="tag">&lt;<span class="name">strong</span>&gt;</span>docker<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> container running Nginx.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>my id is xxxx,my name is xxx<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-尝试使用-p、-v、-d、-rm、-name参数创建cloud-computing-static-site的container，具体要求为：映射container的80端口到host的8000端口，映射container的-usr-share-nginx-html-mypage路径到-var-html文件夹，container名称以自己的学号命名"><a href="#4-尝试使用-p、-v、-d、-rm、-name参数创建cloud-computing-static-site的container，具体要求为：映射container的80端口到host的8000端口，映射container的-usr-share-nginx-html-mypage路径到-var-html文件夹，container名称以自己的学号命名" class="headerlink" title="4. 尝试使用-p、-v、-d、--rm、--name参数创建cloud_computing/static_site的container，具体要求为：映射container的80端口到host的8000端口，映射container的/usr/share/nginx/html/mypage路径到/var/html文件夹，container名称以自己的学号命名"></a>4. 尝试使用<code>-p、-v、-d、--rm、--name</code>参数创建<code>cloud_computing/static_site</code>的<code>container</code>，具体要求为：映射<code>container</code>的<code>80</code>端口到<code>host</code>的<code>8000</code>端口，映射<code>container</code>的<code>/usr/share/nginx/html/mypage</code>路径到<code>/var/html</code>文件夹，<code>container</code>名称以自己的学号命名</h4><h4 id="5-访问本地浏览器-http-localhost-8000-mypage-index-html，若该端口访问不了，可查看ucloud防火墙查看是否开放了该端口号。若未开放，则可创建防火墙，设置所需的开放端口"><a href="#5-访问本地浏览器-http-localhost-8000-mypage-index-html，若该端口访问不了，可查看ucloud防火墙查看是否开放了该端口号。若未开放，则可创建防火墙，设置所需的开放端口" class="headerlink" title="5.访问本地浏览器:http://localhost:8000/mypage/index.html，若该端口访问不了，可查看ucloud防火墙查看是否开放了该端口号。若未开放，则可创建防火墙，设置所需的开放端口"></a>5.访问本地浏览器:<code>http://localhost:8000/mypage/index.html</code>，若该端口访问不了，可查看ucloud防火墙查看是否开放了该端口号。若未开放，则可创建防火墙，设置所需的开放端口</h4><h3 id="四-熟悉Dockerfile的简单使用"><a href="#四-熟悉Dockerfile的简单使用" class="headerlink" title="四) 熟悉Dockerfile的简单使用"></a>四) 熟悉Dockerfile的简单使用</h3><h4 id="到现在为止，同学可能会疑惑，这种docker的镜像到底是如何创建的呢？这里就要使用到一个概念-Dockerfile"><a href="#到现在为止，同学可能会疑惑，这种docker的镜像到底是如何创建的呢？这里就要使用到一个概念-Dockerfile" class="headerlink" title="到现在为止，同学可能会疑惑，这种docker的镜像到底是如何创建的呢？这里就要使用到一个概念: Dockerfile"></a>到现在为止，同学可能会疑惑，这种docker的镜像到底是如何创建的呢？这里就要使用到一个概念: <code>Dockerfile</code></h4><h4 id="1-从repo中下载附件，通过在本地运行scp命令上传到云服务器并解压"><a href="#1-从repo中下载附件，通过在本地运行scp命令上传到云服务器并解压" class="headerlink" title="1.从repo中下载附件，通过在本地运行scp命令上传到云服务器并解压"></a>1.从repo中下载附件，通过在本地运行<code>scp</code>命令上传到云服务器并解压</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ scp -r path\demo2.zip root@113.31.105.65:~</span><br><span class="line"></span><br><span class="line">root@113.31.105.65<span class="string">&#x27;s password: </span></span><br><span class="line"><span class="string">demo2.zip                                      100% 1308   142.4KB/s   00:00</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">$ unzip demo2.zip </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Archive:  demo2.zip</span></span><br><span class="line"><span class="string">   creating: demo2/</span></span><br><span class="line"><span class="string">  inflating: __MACOSX/._demo2         </span></span><br><span class="line"><span class="string">  inflating: demo2/Dockerfile         </span></span><br><span class="line"><span class="string">  inflating: demo2/app.py  </span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-查看Dockerfile"><a href="#2-查看Dockerfile" class="headerlink" title="2.查看Dockerfile"></a>2.查看Dockerfile</h4><h4 id="这是一个Flask-App-是一个用python写的网页应用，我们进入demo2文件夹-只有两个文件app-py、Dockerfile"><a href="#这是一个Flask-App-是一个用python写的网页应用，我们进入demo2文件夹-只有两个文件app-py、Dockerfile" class="headerlink" title="这是一个Flask App,是一个用python写的网页应用，我们进入demo2文件夹,只有两个文件app.py、Dockerfile"></a>这是一个<code>Flask App</code>,是一个用<code>python</code>写的网页应用，我们进入<code>demo2</code>文件夹,只有两个文件<code>app.py、Dockerfile</code></h4><h4 id="首先我们使用cat-app-py命令查看app-py的内容，显示如下："><a href="#首先我们使用cat-app-py命令查看app-py的内容，显示如下：" class="headerlink" title="首先我们使用cat app.py命令查看app.py的内容，显示如下："></a>首先我们使用<code>cat app.py</code>命令查看<code>app.py</code>的内容，显示如下：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hello</span>():</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;hello world!&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="看不懂没有关系，这就是一个很简单的flask应用，它定义了一个路由，当我们访问-http-localhost-5000-的时候，浏览器会给我们返回hello-world"><a href="#看不懂没有关系，这就是一个很简单的flask应用，它定义了一个路由，当我们访问-http-localhost-5000-的时候，浏览器会给我们返回hello-world" class="headerlink" title="看不懂没有关系，这就是一个很简单的flask应用，它定义了一个路由，当我们访问:http://localhost:5000/的时候，浏览器会给我们返回hello world!"></a>看不懂没有关系，这就是一个很简单的flask应用，它定义了一个路由，当我们访问:<code>http://localhost:5000/</code>的时候，浏览器会给我们返回<code>hello world!</code></h4><h4 id="接下来我们继续查看Dockerfile："><a href="#接下来我们继续查看Dockerfile：" class="headerlink" title="接下来我们继续查看Dockerfile："></a>接下来我们继续查看<code>Dockerfile</code>：</h4><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取python镜像作为基本环境</span></span><br><span class="line"><span class="keyword">FROM</span> cloud_computing/python:latest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置额外信息</span></span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"> description=<span class="string">&quot;Dockerfile Demo for ECNU&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在container中运行命令（这一步在container安装pip依赖）</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install flask -i https://pypi.tuna.tsinghua.edu.cn/simple</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地目录拷贝到container并且设置为工作目录</span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"> ./app.py /opt</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /opt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将5000端口暴露出来</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 容器启动的执行命令</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> python app.py</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="可以看出Dockerfile的书写非常简单易懂，涉及到几个命令"><a href="#可以看出Dockerfile的书写非常简单易懂，涉及到几个命令" class="headerlink" title="可以看出Dockerfile的书写非常简单易懂，涉及到几个命令"></a>可以看出<code>Dockerfile</code>的书写非常简单易懂，涉及到几个命令</h4><table>
-<thead>
-<tr>
-<th align="center">FROM</th>
-<th align="center">指定容器来自的镜像</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">RUN</td>
-<td align="center">容器中运行shell命令</td>
-</tr>
-<tr>
-<td align="center">ADD</td>
-<td align="center">将本地文件传送到容器指定位置</td>
-</tr>
-<tr>
-<td align="center">WORKDIR</td>
-<td align="center">将容器中某个目录设置为工作目录（当前目录）</td>
-</tr>
-<tr>
-<td align="center">EXPOSE</td>
-<td align="center">将容器中某个端口暴露出来（如上述flask工作在5000端口，将其暴露出来）</td>
-</tr>
-<tr>
-<td align="center">CMD</td>
-<td align="center">容器启动自动执行的shell命令</td>
-</tr>
-<tr>
-<td align="center">LABEL</td>
-<td align="center">设置一些额外的信息</td>
-</tr>
-</tbody></table>
-<h4 id="通过dockerfile的方式，我们就可以将各种各样的环境打包成镜像上传到docker-hub上供他人使用"><a href="#通过dockerfile的方式，我们就可以将各种各样的环境打包成镜像上传到docker-hub上供他人使用" class="headerlink" title="通过dockerfile的方式，我们就可以将各种各样的环境打包成镜像上传到docker hub上供他人使用"></a>通过<code>dockerfile</code>的方式，我们就可以将各种各样的环境打包成镜像上传到<code>docker hub</code>上供他人使用</h4><h4 id="3-打包镜像"><a href="#3-打包镜像" class="headerlink" title="3.打包镜像"></a>3.打包镜像</h4><h4 id="在当前目录（Dockerfile同级目录），执行如下命令，docker会自动将当前环境部署打包为一个image"><a href="#在当前目录（Dockerfile同级目录），执行如下命令，docker会自动将当前环境部署打包为一个image" class="headerlink" title="在当前目录（Dockerfile同级目录），执行如下命令，docker会自动将当前环境部署打包为一个image"></a>在当前目录（<code>Dockerfile</code>同级目录），执行如下命令，<code>docker</code>会自动将当前环境部署打包为一个<code>image</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t user-name/image-name .</span><br></pre></td></tr></table></figure>
-
-<h4 id="通过上面的命令，我们就在本地打包好了一个名叫username-image-name的镜像，可以通过docker-images命令查看是否创建成功。我们可以通过之前学习的docker-run命令去创建该镜像的container"><a href="#通过上面的命令，我们就在本地打包好了一个名叫username-image-name的镜像，可以通过docker-images命令查看是否创建成功。我们可以通过之前学习的docker-run命令去创建该镜像的container" class="headerlink" title="通过上面的命令，我们就在本地打包好了一个名叫username/image-name的镜像，可以通过docker images命令查看是否创建成功。我们可以通过之前学习的docker run命令去创建该镜像的container"></a>通过上面的命令，我们就在本地打包好了一个名叫<code>username/image-name</code>的镜像，可以通过<code>docker images</code>命令查看是否创建成功。我们可以通过之前学习的<code>docker run</code>命令去创建该镜像的<code>container</code></h4>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/tennnx.github.io/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="clfxyndci0000t4wd6flj271u" data-title="Docker基本命令" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="clfy2pnmm0001e0wd4o2z0ih7" data-title="Docker基本命令" class="article-share-link">Share</a>
       
       
       
@@ -252,7 +108,7 @@
 <nav id="article-nav">
   
   
-    <a href="/tennnx.github.io/2023/04/01/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/04/01/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">linux基本命令</div>
     </a>
@@ -279,7 +135,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/tennnx.github.io/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/tennnx.github.io/archives/2023/03/">March 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
     </div>
   </div>
 
@@ -292,19 +148,19 @@
       <ul>
         
           <li>
-            <a href="/tennnx.github.io/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Docker基本命令</a>
+            <a href="/2023/04/01/Docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Docker基本命令</a>
           </li>
         
           <li>
-            <a href="/tennnx.github.io/2023/04/01/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">linux基本命令</a>
+            <a href="/2023/04/01/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">linux基本命令</a>
           </li>
         
           <li>
-            <a href="/tennnx.github.io/2023/03/31/Assignment1/">(no title)</a>
+            <a href="/2023/03/31/Assignment1/">(no title)</a>
           </li>
         
           <li>
-            <a href="/tennnx.github.io/2023/03/31/hello-world/">Hello World</a>
+            <a href="/2023/03/31/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -329,25 +185,25 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/tennnx.github.io/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/tennnx.github.io/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
     
 
 
-<script src="/tennnx.github.io/js/jquery-3.4.1.min.js"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
 
 
 
   
-<script src="/tennnx.github.io/fancybox/jquery.fancybox.min.js"></script>
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/tennnx.github.io/js/script.js"></script>
+<script src="/js/script.js"></script>
 
 
 
